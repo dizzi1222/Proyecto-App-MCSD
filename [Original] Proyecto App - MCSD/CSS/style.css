@@ -1,0 +1,325 @@
+/* Estilos para el área de Splash Screen */
+
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #b8f0ed;
+    z-index: 200;
+    text-align: center;
+    line-height: 130vh;
+}
+
+.splash.display-none {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    z-index: -10;
+    color: white;
+    text-align: center;
+    line-height: 90vh;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade_in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in fowards;
+}
+
+
+/* Estilos para el área de logo */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #42a8a1;
+}
+
+header img {
+    width: 110px;
+    height: 100px;
+}
+
+body {
+    background: #b8f0ed;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+
+/* Estilos para el menú desplegable */
+
+nav {
+    background-color: #d8d3d3;
+    color: #d8d3d3;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+}
+
+nav li a {
+    display: block;
+    color: #d8d3d3;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+#menu {
+    display: none;
+    position: right;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    color: #d8d3d3;
+    z-index: 1;
+}
+
+#menu ul {
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    height: 100%;
+    text-align: right;
+    margin: 0px 5px;
+    display: block;
+}
+
+#menu li a {
+    display: block;
+    color: #d8d3d3;
+    padding: 8px 0px;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    background-color: #111;
+    display: block;
+}
+
+#menu-btn {
+    color: #d8d3d3;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+#menu-btn:hover {
+    background-color: rgb(250, 248, 248);
+    float: right;
+}
+
+#menu-button img {
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+
+/* Estilos para las tarjetas de botones */
+
+.main {
+    padding: 0 10%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 7px;
+}
+
+.card {
+    width: 130px;
+    /* Ancho de la tarjeta */
+    height: 150px;
+    /* Alto de la tarjeta */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card1 {
+    width: 130px;
+    /* Ancho de la tarjeta */
+    height: 150px;
+    /* Alto de la tarjeta */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card1:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.card2 {
+    width: 200px;
+    /* Ancho de la tarjeta */
+    height: 130px;
+    /* Alto de la tarjeta */
+    margin: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card2:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-menu img {
+    width: 34px;
+    height: 34px;
+    float: right;
+}
+
+.card-logo {
+    width: 110px;
+    /* Ancho del logo */
+    height: 93px;
+    /* Alto de logo */
+}
+
+.card-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-titulos {
+    width: 200px;
+    /* Ancho de la tarjeta */
+    height: 150px;
+    /* Alto de la tarjeta */
+    margin: 30px;
+}
+
+.card-titulos img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-logo-PLEGU {
+    width: 270px;
+    /* Ancho de la tarjeta */
+    height: 250px;
+    /* Alto de la tarjeta */
+    margin: 30px;
+}
+
+.card-logo-PLEGU img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-contactos {
+    width: 70px;
+    /* Ancho de la tarjeta */
+    height: 70px;
+    /* Alto de la tarjeta */
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-contactos:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-contactos img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-numeros {
+    width: 330px;
+    /* Ancho de la tarjeta */
+    height: 100px;
+    /* Alto de la tarjeta */
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-numeros:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-numeros img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-column-2 {
+    grid-template-columns: 1fr 1fr;
+}
