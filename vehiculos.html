@@ -1,182 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MANUAL CONDUCCION SEGURIDAD DOMINICANA</title>
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tipos de vehículos y sus características según la normativa dominicana">
+  <title>Los Vehículos - MCSD</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
 
-<body>
-    <!-- Área de logo -->
-    <header>
-        <main class="main">
-            <a href="index.html">
-                <img src="img/logo.png" alt="Logo">
-            </a>
-            <a href="index.html">
-                <div class="card-logo">
-                    <img src="img/titulo_vehiculos.png" alt="Logo">
-                </div>
-            </a>
-        </main>
-    </header>
-    <!-- Menú desplegable -->
-    <div class="card-menu">
-        <button id="menu-btn"><img src="img/menu-button.png" alt="Botón de menú"></button>
+<body class="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50">
+
+  <!-- Header / Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="img/logo.png" alt="Logo MCSD" class="w-14 h-14 transition-transform group-hover:scale-110">
+          <img src="img/titulo_vehiculos.png" alt="Los Vehículos" class="h-12 hidden sm:block">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="text-white hover:text-purple-200 transition-colors font-medium">Inicio</a>
+          <a href="nosotros.html" class="text-white hover:text-purple-200 transition-colors font-medium">Nosotros</a>
+          <a href="contactos.html" class="text-white hover:text-purple-200 transition-colors font-medium">Contactos</a>
+          <a href="numeros.html" class="text-white hover:text-purple-200 transition-colors font-medium">Números</a>
+        </nav>
+
+        <button id="menu-btn"
+                class="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+          <span class="iconify" data-icon="mdi:menu" data-width="32"></span>
+        </button>
+      </div>
     </div>
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contactos.html">Contactos</a></li>
-            <li><a href="numeros.html">Numeros</a></li>
-        </ul>
-    </nav>
-    <script src="js/menu.js"></script>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav id="menu" class="fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-purple-600 to-pink-600 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+    <div class="p-6">
+      <button class="absolute top-4 right-4 p-2 text-white hover:bg-white/10 rounded-lg transition-colors" onclick="document.getElementById('menu').classList.remove('menu-open')">
+        <span class="iconify" data-icon="mdi:close" data-width="24"></span>
+      </button>
+
+      <ul class="mt-12 space-y-4">
+        <li><a href="index.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:home" data-width="20"></span>Inicio</a></li>
+        <li><a href="nosotros.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:account-group" data-width="20"></span>Nosotros</a></li>
+        <li><a href="contactos.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:email" data-width="20"></span>Contactos</a></li>
+        <li><a href="numeros.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:phone" data-width="20"></span>Números</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- El texto y las imagenes -->
-    <main class="main">
-        <center>
+  <!-- Main Content -->
+  <main class="pt-24 pb-16">
+    <div class="container mx-auto px-4">
 
-            <div class="card2">
-                <img src="img/grua.jpg" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">GRUA DE PLATAFORMA</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Vehículo con carrocería de estructura plana descubierta, diseñada para el transporte de carga utilizando un cambio de fuerza o brazo articulado.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
+      <!-- Page Title -->
+      <div class="text-center mb-12 animate-fade-in-up">
+        <h1 class="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">Los Vehículos</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Conoce los diferentes tipos de vehículos y sus características según la normativa dominicana
+        </p>
+      </div>
 
-        <center>
+      <!-- Vehicles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-            <div class="card2">
-                <img src="img/motocicleta.jpg" alt="Imagen 1">
+        <!-- Grúa de Plataforma -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_0%_cover_30%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/grua.jpg" alt="Grúa de Plataforma" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-2">Grúa de Plataforma</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Vehículo con carrocería de estructura plana descubierta, diseñada para el transporte de carga utilizando un cambio de fuerza o brazo articulado.
+              </p>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">MOTOR O MOTOCICLETA</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Vehículo de dos ruedas provisto de motor de cilindrada igual o superior a 50cc. Capacidad de velocidad superior a 45km/h.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
+          </div>
+        </div>
 
-        <center>
+        <!-- Motor o Motocicleta -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_10%_cover_40%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/motocicleta.jpg" alt="Motocicleta" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-2">Motor o Motocicleta</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Vehículo de dos ruedas provisto de motor de cilindrada igual o superior a 50cc. Capacidad de velocidad superior a 45km/h.
+              </p>
+            </div>
+          </div>
+        </div>
 
-            <div class="card2">
-                <img src="img/four wheel.jpg" alt="Imagen 1">
+        <!-- Four Wheel -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_20%_cover_50%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/four wheel.jpg" alt="Four Wheel" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-2">Four Wheel</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Vehículo de cuatro ruedas con una masa de vacío, sin incluir la masa de las baterías en el caso de vehículos eléctricos. No superior a 800lbs.
+              </p>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">FOUR WHEEL</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Vehículo de cuatro ruedas con una masa de vacío, sin incluir la masa de las baterías en el caso de vehículos eléctricos. No superior a 800lbs. No superior a 1,100lbs.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
+          </div>
+        </div>
 
-        <center>
+        <!-- Camioneta -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_30%_cover_60%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/camioneta.jpg" alt="Camioneta" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-2">Camioneta</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Vehículo con motor diseñado para el transporte de carga con un máximo de 2,000lbs.
+              </p>
+            </div>
+          </div>
+        </div>
 
-            <div class="card2">
-                <img src="img/camioneta.jpg" alt="Imagen 1">
+        <!-- Automóvil -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_40%_cover_70%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/automovil.jpg" alt="Automóvil" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-2">Automóvil</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Destinado al transporte de personas que tenga por lo menos cuatro ruedas y con cuatro personas como máximo además del conductor.
+              </p>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">CAMIONETA</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Vehículo con motor diseñado para el transporte de carga con un máximo de 2,000lbs.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
+          </div>
+        </div>
 
-        <center>
+        <!-- Minibus -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_50%_cover_80%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/minibus.png" alt="Minibus" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-2">Minibus</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Con motor de baja capacidad destinado al transporte de pasajeros de hasta 22 personas.
+              </p>
+            </div>
+          </div>
+        </div>
 
-            <div class="card2">
-                <img src="img/automovil.jpg" alt="Imagen 1">
+        <!-- Taxi -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_60%_cover_90%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/taxi.png" alt="Taxi" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-2">Taxi</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Destinado al transporte público de pasajeros.
+              </p>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">AUTOMOVIL</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Destinada al transporte de personas que tenga por lo menos cuatro ruedas y con cuatro personas como máximo además el conductor.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
+          </div>
+        </div>
 
-        <center>
+        <!-- Autobús Interurbano -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_70%_cover_100%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/bus interurbano.jpg" alt="Autobús Interurbano" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-2">Autobús Interurbano</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                De servicio público de gran capacidad para el transporte interprovincial de pasajeros, con un mínimo de 36 personas.
+              </p>
+            </div>
+          </div>
+        </div>
 
-            <div class="card1">
-                <img src="img/minibus.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">MINIBUS</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Con motor de baja capacidad destinado al transporte de pasajeros de hasta 22 personas.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
+      </div>
 
-        <center>
+      <!-- Back Button -->
+      <div class="text-center mt-12">
+        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:shadow-lg transition-all hover:-translate-y-1">
+          <span class="iconify" data-icon="mdi:arrow-left" data-width="20"></span>
+          Volver al Inicio
+        </a>
+      </div>
 
-            <div class="card1">
-                <img src="img/taxi.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">TAXI</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Destinado al transporte público de pasajeros.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
+    </div>
+  </main>
 
-        <center>
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-teal-700 to-cyan-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm opacity-80">© 2026 MCSD - Manual de Conducción Seguridad Dominicana</p>
+      <p class="text-xs opacity-60 mt-2">Desarrollado por Diego Samuel y equipo • v2.0</p>
+    </div>
+  </footer>
 
-            <div class="card2">
-                <img src="img/bus interurbano.jpg" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">AUTOBUS INTERURBANO</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">De servicio público de gran capacidad para el transporte interprovincial de pasajeros, con un mínimo de 36 personas.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
-    </main>
-    <script src="js/script.js"></script>
+  <script type="module" src="src/js/main.js"></script>
+
+  <style>
+    #menu.menu-open { transform: translateX(0); }
+    #menu-overlay.active { opacity: 1; pointer-events: auto; }
+  </style>
 </body>
 
 </html>

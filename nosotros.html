@@ -1,134 +1,197 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MANUAL CONDUCCION SEGURIDAD DOMINICANA</title>
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce al equipo detrás del Manual de Conducción Seguridad Dominicana">
+  <title>Nosotros - MCSD</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
 
-<body>
-    <!-- Área de logo -->
-    <header>
-        <main class="main">
-            <a href="index.html">
-                <img src="img/logo.png" alt="Logo">
-            </a>
-            <a href="index.html">
-                <div class="card-logo">
-                    <img src="img/titulo_nosotros.png" alt="Logo">
-                </div>
-            </a>
-        </main>
-    </header>
-    <!-- Menú desplegable -->
-    <div class="card-menu">
-        <button id="menu-btn"><img src="img/menu-button.png" alt="Botón de menú"></button>
+<body class="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50">
+
+  <!-- Header / Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-teal-600 to-cyan-700 shadow-lg">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="img/logo.png" alt="Logo MCSD" class="w-14 h-14 transition-transform group-hover:scale-110">
+          <img src="img/titulo_nosotros.png" alt="Nosotros" class="h-12 hidden sm:block">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="text-white hover:text-cyan-200 transition-colors font-medium">Inicio</a>
+          <a href="contactos.html" class="text-white hover:text-cyan-200 transition-colors font-medium">Contactos</a>
+          <a href="numeros.html" class="text-white hover:text-cyan-200 transition-colors font-medium">Números</a>
+        </nav>
+
+        <button id="menu-btn"
+                class="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+          <span class="iconify" data-icon="mdi:menu" data-width="32"></span>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="contactos.html">Contactos</a></li>
-            <li><a href="numeros.html">Numeros</a></li>
-        </ul>
-    </nav>
-    <script src="js/menu.js"></script>
+  <!-- Mobile Menu -->
+  <nav id="menu" class="fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-teal-600 to-cyan-700 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+    <div class="p-6">
+      <button class="absolute top-4 right-4 p-2 text-white hover:bg-white/10 rounded-lg transition-colors" onclick="document.getElementById('menu').classList.remove('menu-open')">
+        <span class="iconify" data-icon="mdi:close" data-width="24"></span>
+      </button>
+
+      <ul class="mt-12 space-y-4">
+        <li><a href="index.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:home" data-width="20"></span>Inicio</a></li>
+        <li><a href="nosotros.html" class="block px-4 py-3 text-white bg-white/10 rounded-lg font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:account-group" data-width="20"></span>Nosotros</a></li>
+        <li><a href="contactos.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:email" data-width="20"></span>Contactos</a></li>
+        <li><a href="numeros.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:phone" data-width="20"></span>Números</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- El texto y las imagenes -->
-    <main class="main">
-        <center>
+  <!-- Main Content -->
+  <main class="pt-24 pb-16">
+    <div class="container mx-auto px-4">
 
-            <div class="card1">
-                <img src="img/diego.png" alt="Imagen 1">
+      <!-- Page Title -->
+      <div class="text-center mb-12 animate-fade-in-up">
+        <h1 class="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">Nuestro Equipo</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Estudiantes del Liceo Técnico Luis Ernesto Gómez Uribe, área técnica Desarrollo y Administración de Aplicaciones Informáticas
+        </p>
+      </div>
+
+      <!-- Team Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+        <!-- Team Member 1: Diego -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_0%_cover_30%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="h-2 bg-gradient-to-r from-purple-400 to-pink-500"></div>
+            <div class="p-6">
+              <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-purple-100">
+                <img src="img/diego.png" alt="Diego Samuel" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-800 text-center mb-2">Diego Samuel</h3>
+              <p class="text-gray-600 text-center text-sm leading-relaxed">
+                Estudiante del liceo técnico Luis Ernesto Gómez Uribe, en el área técnica Desarrollo y Administración de Aplicaciones Informáticas.
+              </p>
             </div>
-            <div class="card-text">
-                <p>
-                    <font text size="5" color="#202020">Mi nombre es Diego Samuel y estudio en el liceo tecnico Luis Ernesto Gomez Uribe, en la area tecnica Desarrollo y Administracion de Aplicaciones Informaticas.
-                </p>     
-            <p style align="center">
-                </font>
+          </div>
+        </div>
+
+        <!-- Team Member 2: Darleny -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_10%_cover_40%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="h-2 bg-gradient-to-r from-pink-400 to-rose-500"></div>
+            <div class="p-6">
+              <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-pink-100">
+                <img src="img/darleny.png" alt="Darleny Rosario Cruz" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-800 text-center mb-2">Darleny Rosario Cruz</h3>
+              <p class="text-gray-600 text-center text-sm leading-relaxed">
+                Estudiante del liceo técnico Luis Ernesto Gómez Uribe, en el área técnica Desarrollo y Administración de Aplicaciones Informáticas.
+              </p>
             </div>
-        </center>
+          </div>
+        </div>
 
-        <center>
-
-            <div class="card1">
-                <img src="img/darleny.png" alt="Imagen 1">
+        <!-- Team Member 3: Randy -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_20%_cover_50%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="h-2 bg-gradient-to-r from-orange-400 to-yellow-500"></div>
+            <div class="p-6">
+              <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-orange-100">
+                <img src="img/randy.png" alt="Randy Mustafá Ortiz" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-800 text-center mb-2">Randy Mustafá Ortiz</h3>
+              <p class="text-gray-600 text-center text-sm leading-relaxed">
+                Estudiante del liceo técnico Luis Ernesto Gómez Uribe, en el área técnica Desarrollo y Administración de Aplicaciones Informáticas.
+              </p>
             </div>
-            <div class="card-text">
-                <p>
-                    <font text size="5" color="#202020">Mi nombre es Darleny Rosario Cruz y estudio en el liceo tecnico Luis Ernesto Gomez Uribe, en la area tecnica Desarrollo y Administracion de Aplicaciones Informaticas.
-                </p>     
-            <p style align="center">
-                </font>
+          </div>
+        </div>
+
+        <!-- Team Member 4: Luis -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_30%_cover_60%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="h-2 bg-gradient-to-r from-green-400 to-emerald-500"></div>
+            <div class="p-6">
+              <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-green-100">
+                <img src="img/luis.png" alt="Luis Rafael Rodriguez" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-800 text-center mb-2">Luis Rafael Rodriguez</h3>
+              <p class="text-gray-600 text-center text-sm leading-relaxed">
+                Estudiante del liceo técnico Luis Ernesto Gómez Uribe, en el área técnica Desarrollo y Administración de Aplicaciones Informáticas.
+              </p>
             </div>
-        </center>
+          </div>
+        </div>
 
-        <center>
-
-            <div class="card1">
-                <img src="img/randy.png" alt="Imagen 1">
+        <!-- Team Member 5: Frankelis -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_40%_cover_70%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="h-2 bg-gradient-to-r from-blue-400 to-cyan-500"></div>
+            <div class="p-6">
+              <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-blue-100">
+                <img src="img/chanel.png" alt="Frankelis Channel Baéz" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-800 text-center mb-2">Frankelis Channel Baéz</h3>
+              <p class="text-gray-600 text-center text-sm leading-relaxed">
+                Estudiante del liceo técnico Luis Ernesto Gómez Uribe, en el área técnica Desarrollo y Administración de Aplicaciones Informáticas.
+              </p>
             </div>
-            <div class="card-text">
-                <p>
-                    <font text size="5" color="#202020">Mi nombre es Randy Mustafá Ortiz y estudio en el liceo tecnico Luis Ernesto Gomez Uribe, en la area tecnica Desarrollo y Administracion de Aplicaciones Informaticas.
-                </p>     
-            <p style align="center">
-                </font>
+          </div>
+        </div>
+
+        <!-- Team Member 6: Yosua -->
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_50%_cover_80%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="h-2 bg-gradient-to-r from-indigo-400 to-purple-500"></div>
+            <div class="p-6">
+              <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-indigo-100">
+                <img src="img/yosua.png" alt="Yosua Abreu Marte" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-800 text-center mb-2">Yosua Abreu Marte</h3>
+              <p class="text-gray-600 text-center text-sm leading-relaxed">
+                Estudiante del liceo técnico Luis Ernesto Gómez Uribe, en el área técnica Desarrollo y Administración de Aplicaciones Informáticas.
+              </p>
             </div>
-        </center>
+          </div>
+        </div>
 
-        <center>
+      </div>
 
-            <div class="card1">
-                <img src="img/luis.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <p>
-                    <font text size="5" color="#202020">Mi nombre es Luis Rafael Rodriguez y estudio en el liceo tecnico Luis Ernesto Gomez Uribe, en la area tecnica Desarrollo y Administracion de Aplicaciones Informaticas.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
+      <!-- Back Button -->
+      <div class="text-center mt-12">
+        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium rounded-lg hover:shadow-lg transition-all hover:-translate-y-1">
+          <span class="iconify" data-icon="mdi:arrow-left" data-width="20"></span>
+          Volver al Inicio
+        </a>
+      </div>
 
-        <center>
+    </div>
+  </main>
 
-            <div class="card1">
-                <img src="img/chanel.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <p>
-                    <font text size="5" color="#202020">Mi nombre es Frankelis Channel Baéz y estudio en el liceo tecnico Luis Ernesto Gomez Uribe, en la area tecnica Desarrollo y Administracion de Aplicaciones Informaticas.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-teal-700 to-cyan-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm opacity-80">© 2026 MCSD - Manual de Conducción Seguridad Dominicana</p>
+      <p class="text-xs opacity-60 mt-2">Desarrollado por Diego Samuel y equipo • v2.0</p>
+    </div>
+  </footer>
 
-        <center>
+  <script type="module" src="src/js/main.js"></script>
 
-            <div class="card1">
-                <img src="img/yosua.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <p>
-                    <font text size="5" color="#202020">Mi nombre es Yosua Abreu Marte y estudio en el liceo tecnico Luis Ernesto Gomez Uribe, en la area tecnica Desarrollo y Administracion de Aplicaciones Informaticas.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
-
-
-
-    </main>
-
-    <script src="js/script.js"></script>
+  <style>
+    #menu.menu-open { transform: translateX(0); }
+    #menu-overlay.active { opacity: 1; pointer-events: auto; }
+  </style>
 </body>
 
 </html>

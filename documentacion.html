@@ -1,176 +1,135 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MANUAL CONDUCCION SEGURIDAD DOMINICANA</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documentación requerida para conducir en República Dominicana">
+  <title>Documentación - MCSD</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
-
-<body>
-    <!-- Área de logo -->
-    <header>
-        <main class="main">
-            <a href="index.html">
-                <img src="img/logo.png" alt="Logo">
-            </a>
-            <a href="index.html">
-                <div class="card-logo">
-                    <img src="img/titulo_documentacion.png" alt="Logo">
-                </div>
-            </a>
-        </main>
-    </header>
-    <!-- Menú desplegable -->
-    <div>
-        <div class="card-menu">
-            <button id="menu-btn"><img src="img/menu-button.png" alt="Botón de menú"></button>
-        </div>
-        <nav id="menu">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contactos.html">Contactos</a></li>
-                <li><a href="numeros.html">Numeros</a></li>
-            </ul>
+<body class="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50">
+  <header class="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-green-600 to-emerald-600 shadow-lg">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="img/logo.png" alt="Logo MCSD" class="w-14 h-14 transition-transform group-hover:scale-110">
+          <img src="img/titulo_documentacion.png" alt="Documentación" class="h-12 hidden sm:block">
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="text-white hover:text-green-200 transition-colors font-medium">Inicio</a>
+          <a href="nosotros.html" class="text-white hover:text-green-200 transition-colors font-medium">Nosotros</a>
+          <a href="contactos.html" class="text-white hover:text-green-200 transition-colors font-medium">Contactos</a>
+          <a href="numeros.html" class="text-white hover:text-green-200 transition-colors font-medium">Números</a>
         </nav>
-        <script src="js/menu.js"></script>
+        <button id="menu-btn" class="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors" aria-label="Abrir menú" aria-expanded="false">
+          <span class="iconify" data-icon="mdi:menu" data-width="32"></span>
+        </button>
+      </div>
     </div>
-
-    <!-- El texto y las imagenes -->
-    <main class="main">
-        <center>
-
-            <div class="card2">
-                <img src="img/licencia de conducir.png" alt="Imagen 1">
+  </header>
+  <nav id="menu" class="fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-green-600 to-emerald-600 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+    <div class="p-6">
+      <button class="absolute top-4 right-4 p-2 text-white hover:bg-white/10 rounded-lg transition-colors" onclick="document.getElementById('menu').classList.remove('menu-open')">
+        <span class="iconify" data-icon="mdi:close" data-width="24"></span>
+      </button>
+      <ul class="mt-12 space-y-4">
+        <li><a href="index.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:home" data-width="20"></span>Inicio</a></li>
+        <li><a href="nosotros.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:account-group" data-width="20"></span>Nosotros</a></li>
+        <li><a href="contactos.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:email" data-width="20"></span>Contactos</a></li>
+        <li><a href="numeros.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:phone" data-width="20"></span>Números</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="pt-24 pb-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 animate-fade-in-up">
+        <h1 class="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">Documentación Requerida</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Conoce los documentos necesarios para conducir legalmente en República Dominicana</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_0%_cover_30%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/licencia de conducir.png" alt="Licencia de Conducir" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Licencia de Conducir</h3>
+              <p class="text-gray-600 text-sm mb-3">Requisitos:</p>
+              <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
+                <li>Pago de impuestos</li>
+                <li>Cédula de identidad</li>
+                <li>Examen médico</li>
+                <li>Examen teórico</li>
+                <li>Examen práctico (15 días después del teórico)</li>
+              </ul>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">REQUISITOS DE LA LICENCIA</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">
-                        <ul div class="text-left">
-                            <li>Pago de impuestos.</li>
-                            <li>Cedula de identidad</li>
-                            <li>Examen medico.</li>
-                            <li>Examen teorico.</li>
-                            <li>Examen practico, luego cumplidos los 15 dias del examen teorico.</li>
-                        </ul>
-                </p>     
-            <p style align="center">
-                </font>
+          </div>
+        </div>
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_10%_cover_40%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/la placa.png" alt="Placas" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Placas</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Las placas de los vehículos con motor y remolques podrán conservar un número fijo y ser expedidas cada 4 años.</p>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card2">
-                <img src="img/la placa.png" alt="Imagen 1">
+          </div>
+        </div>
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_20%_cover_50%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/el seguro.png" alt="Seguro" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Seguro</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Todo propietario de un vehículo con motor que circule por las vías terrestres del país está obligado a proveerse de una póliza de seguro que cubra la responsabilidad civil.</p>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">PLACAS</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Las placas de los vehículos con motor y remolques, podrán conservar un número fijo y ser expedidas cada 4 años.
-                </p>     
-            <p style align="center">
-                </font>
+          </div>
+        </div>
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_30%_cover_60%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/la revista.jpg" alt="Revista" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Revista Técnica</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Todo vehículo con motor debe cumplir con la ley 63-17. Si es aprobado, se le proveerá un marbete que deberá adherirse en la parte superior del parabrisas.</p>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/el seguro.png" alt="Imagen 1">
+          </div>
+        </div>
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_40%_cover_70%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/la matricula.jpg" alt="Matrícula" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Matrícula</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">Certificado donde consta la inscripción del vehículo, su propietario y datos generales. Autoriza al vehículo para transitar por las vías públicas.</p>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">SEGURO</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Todo propietario de un vehiculo con motor, que circule por las vias terrestres del pais, esta obligado a proveerse de una poliza de seguro que cubra la responsabilidad civil.
-                </p>     
-            <p style align="center">
-                </font>
+          </div>
+        </div>
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_50%_cover_80%]">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <img src="img/permiso internacional.jpg" alt="Permiso Internacional" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Permiso Internacional</h3>
+              <p class="text-gray-600 text-sm mb-3">Facilita conducir en países signatarios de convenciones internacionales. Validez: 1 año.</p>
+              <p class="text-gray-600 text-sm">Requisitos: Cédula, licencia vigente, 2 fotos.</p>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/la revista.jpg" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">REVISTA</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Todo vehículo con motor para poder circular deberá cumplir, con la ley 63-17 y sus reglamentos.
-                </p>     
-            <p style align="center">
-                </font>
-                <p>
-                    <font text size="5" color="#202020">Si el vehículo es aprobado en la revista, se le proveerá un marbete, este deberá ser adherido en la parte superior del parabrisas en un lugar visible.
-                    </font>
-                </p>     
-            <p style align="center">
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card2">
-                <img src="img/la matricula.jpg" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">MATRICULA</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Es el certificado donde constará la inscripción del vehículo o remolque, así como su propietario y datos generales, con lo cual queda autorizado por la dirección general de rentas internas, para transitar por las vías públicas, será
-                        llevado en original o fotocopia.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/permiso internacional.jpg" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">PERMISO INTERNACIONAL DE CONDUCIR</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Este documento facilita a su beneficiario a conducir automotores en cualquier país signatario de las convenciones internacionales celebradas en ginebra, ante la ONU y OEA en 194, exacto en el país de origen. Tiene una validez de 1año,
-                        es un documento de identificación personal valido en todo el mundo y los requisitos son:
-                </p>     
-            <p style align="center">
-                </font>
-                <p>
-                    <font text size="5" color="#202020">
-                        <ul div class="text-left">
-                            <li>Cedula de identidad.</li>
-                            <li>
-                                Licencia de conducir vigente.
-                            </li>
-                            <li>
-                                Dos fotos.
-                            </li>
-                        </ul>
-                    </font>
-                </p>     
-            <p style align="center">
-            </div>
-        </center>
-    </main>
-    <script src="js/script.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:shadow-lg transition-all hover:-translate-y-1">
+          <span class="iconify" data-icon="mdi:arrow-left" data-width="20"></span>
+          Volver al Inicio
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-gradient-to-r from-teal-700 to-cyan-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm opacity-80">© 2026 MCSD - Manual de Conducción Seguridad Dominicana</p>
+      <p class="text-xs opacity-60 mt-2">Desarrollado por Diego Samuel y equipo • v2.0</p>
+    </div>
+  </footer>
+  <script type="module" src="src/js/main.js"></script>
+  <style>
+    #menu.menu-open { transform: translateX(0); }
+    #menu-overlay.active { opacity: 1; pointer-events: auto; }
+  </style>
 </body>
-
 </html>

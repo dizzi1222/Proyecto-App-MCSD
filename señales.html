@@ -1,360 +1,195 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MANUAL CONDUCCION SEGURIDAD DOMINICANA</title>
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Señales de tránsito en República Dominicana - Regulatorias y Preventivas">
+  <title>Señales de Tránsito - MCSD</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
-
-<body>
-    <!-- Área de logo -->
-    <header>
-        <main class="main">
-            <a href="index.html">
-                <img src="img/logo.png" alt="Logo">
-            </a>
-            <a href="index.html">
-                <div class="card-logo">
-                    <img src="img/titulo_señales.png" alt="Logo">
-                </div>
-            </a>
-        </main>
-    </header>
-    <!-- Menú desplegable -->
-    <div class="card-menu">
-        <button id="menu-btn"><img src="img/menu-button.png" alt="Botón de menú"></button>
+<body class="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50">
+  <header class="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-orange-600 to-yellow-600 shadow-lg">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="img/logo.png" alt="Logo MCSD" class="w-14 h-14 transition-transform group-hover:scale-110">
+          <img src="img/titulo_señales.png" alt="Señales" class="h-12 hidden sm:block">
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="text-white hover:text-orange-200 transition-colors font-medium">Inicio</a>
+          <a href="nosotros.html" class="text-white hover:text-orange-200 transition-colors font-medium">Nosotros</a>
+          <a href="contactos.html" class="text-white hover:text-orange-200 transition-colors font-medium">Contactos</a>
+          <a href="numeros.html" class="text-white hover:text-orange-200 transition-colors font-medium">Números</a>
+        </nav>
+        <button id="menu-btn" class="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors" aria-label="Abrir menú" aria-expanded="false">
+          <span class="iconify" data-icon="mdi:menu" data-width="32"></span>
+        </button>
+      </div>
     </div>
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contactos.html">Contactos</a></li>
-            <li><a href="numeros.html">Numeros</a></li>
-        </ul>
-    </nav>
-    <script src="js/menu.js"></script>
+  </header>
+  <nav id="menu" class="fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-orange-600 to-yellow-600 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+    <div class="p-6">
+      <button class="absolute top-4 right-4 p-2 text-white hover:bg-white/10 rounded-lg transition-colors" onclick="document.getElementById('menu').classList.remove('menu-open')">
+        <span class="iconify" data-icon="mdi:close" data-width="24"></span>
+      </button>
+      <ul class="mt-12 space-y-4">
+        <li><a href="index.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:home" data-width="20"></span>Inicio</a></li>
+        <li><a href="nosotros.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:account-group" data-width="20"></span>Nosotros</a></li>
+        <li><a href="contactos.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:email" data-width="20"></span>Contactos</a></li>
+        <li><a href="numeros.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:phone" data-width="20"></span>Números</a></li>
+      </ul>
     </div>
-
-    <!-- El texto y las imagenes -->
-    <main class="main">
-        <center>
-
-            <div class="card-titulos">
-                <img src="img/señales regulatorias.png" alt="Imagen 1">
+  </nav>
+  <main class="pt-24 pb-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 animate-fade-in-up">
+        <h1 class="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">Señales de Tránsito</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Aprende a reconocer y entender las señales viales para una conducción segura</p>
+      </div>
+      <div class="max-w-6xl mx-auto space-y-16">
+        <section>
+          <div class="flex items-center gap-4 mb-8">
+            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex items-center justify-center">
+              <span class="iconify text-white" data-icon="mdi:octagon" data-width="32"></span>
             </div>
-            <div class="card-text">
-                <font text size="5" color="#202020">Las señales regulatorias indican una orden y se dividen en:</font>
-                <p>
-                    <font text size="5" color="#202020">
-                        <ul div class="text-left">
-                            <li>Señales de Descripción.</li>
-                            <li>Señales de forma.</li>
-                            <li>Señales de tamaño.</li>
-                            <li>Señales de color.</li>
-                            <li>Señales de Leyenda.</li>
-                        </ul>
-                </p>     
-            <p style align="center">
-                </font>
+            <div>
+              <h2 class="text-3xl font-display font-bold text-gray-800">Señales Regulatorias</h2>
+              <p class="text-gray-600">Indican órdenes que deben cumplirse</p>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/velocidad maxima.png" alt="Imagen 1">
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_0%_cover_30%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/velocidad maxima.png" alt="Velocidad Máxima" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Velocidad Máxima</h3></div>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">VELOCIDAD MAXIMA</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Indica a los conductores la velocidad máxima a la que pueden conducir sus vehículos en determinados tramos de las vías
-                </p>     
-            <p style align="center">
-                </font>
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_5%_cover_35%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/no estacione.png" alt="No Estacione" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">No Estacione</h3></div>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/no estacione.png" alt="Imagen 1">
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_10%_cover_40%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/peatones.png" alt="Peatones" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Peatones</h3></div>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">NO ESTACIONE</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Esta señal indica a los conductores la prohibición de estacionarse en todo tiempo en áreas especificadas por la flecha. Un conductor puede detenerse momentáneamente para tomar o dejar mercancías o pasajeros.
-                </p>     
-            <p style align="center">
-                </font>
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_15%_cover_45%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/no rebase.png" alt="No Rebase" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">No Rebase</h3></div>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/peatones.png" alt="Imagen 1">
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_20%_cover_50%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/stop.png" alt="Stop" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Stop</h3></div>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">PEATONES</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Esta señal se instala en los cruces peatonales donde los conductores tienen la obligación de ceder el paso a cualquier peatón, que este cruzando por el cruce peatonal.
-                </p>     
-            <p style align="center">
-                </font>
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_25%_cover_55%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/no entre.png" alt="No Entre" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">No Entre</h3></div>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/no rebase.png" alt="Imagen 1">
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_30%_cover_60%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/no camiones.png" alt="No Camiones" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">No Camiones</h3></div>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">NO REBASE</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Esta señal prohibe rebasar o pasar a otro vehículo que va en la misma direccion o viene en sentido contrario. Generalmente esta señal se instala en los puentes de un sólo carill o en tramos de vías dónde efectúa las maniobras mencionadas.
-                </p>     
-            <p style align="center">
-                </font>
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_35%_cover_65%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/no peatones.png" alt="No Peatones" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">No Peatones</h3></div>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/peso maximo.png" alt="Imagen 1">
+          </div>
+        </section>
+        <section>
+          <div class="flex items-center gap-4 mb-8">
+            <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-xl flex items-center justify-center">
+              <span class="iconify text-white" data-icon="mdi:alert" data-width="32"></span>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">PESO MÁXIMO POR VEHÍCULO</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Indica a los conductores la restricción del limite máximo de peso vehícular que puede soportar una vía, de acuerdo con el tonelaje escrito en la señal.
-                </p>     
-            <p style align="center">
-                </font>
+            <div>
+              <h2 class="text-3xl font-display font-bold text-gray-800">Señales Preventivas</h2>
+              <p class="text-gray-600">Alertan sobre posibles peligros en la vía</p>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/no girar a la derecha.png" alt="Imagen 1">
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_40%_cover_70%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/subida peligrosa.png" alt="Subida Peligrosa" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Subida Peligrosa</h3></div>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">NO DOBLAR A LA DERECHA</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Prohibición a los conductores de girar en el sentidos indicado por la señal respectiva.
-                </p>     
-            <p style align="center">
-                </font>
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_45%_cover_75%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/pavimento irregular.png" alt="Pavimento Irregular" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Pavimento Irregular</h3></div>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/no camiones.png" alt="Imagen 1">
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_50%_cover_80%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/semáforo.png" alt="Semáforo" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Semáforo</h3></div>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">NO CAMIONES</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Prohibido el ingreso de vehículos pesado a una via o area determinada por esta señal.
-                </p>     
-            <p style align="center">
-                </font>
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_55%_cover_85%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/hombres trabajando.png" alt="Hombres Trabajando" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Hombres Trabajando</h3></div>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/no doblar en U.png" alt="Imagen 1">
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_60%_cover_90%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/niños.png" alt="Niños" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Niños</h3></div>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">NO DOBLAR EN U</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Prohibicion para todos los vehículos de girar en U.
-                </p>     
-            <p style align="center">
-                </font>
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_65%_cover_95%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/señal animales.png" alt="Animales" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Animales</h3></div>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/no entre.png" alt="Imagen 1">
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_70%_cover_100%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/depresion.png" alt="Depresión" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Depresión o Badén</h3></div>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">NO ENTRE</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Ningún vehículo puede ingresar hacia la vía donde esa señal esté instalada.
-                </p>     
-            <p style align="center">
-                </font>
+            <div class="timeline-view animate-fade-in-up animate-range-[entry_75%_cover_100%]">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <img src="img/via estrecha.png" alt="Vía Estrecha" class="w-full h-32 object-contain p-4 bg-gray-50">
+                <div class="p-4"><h3 class="font-bold text-gray-800 text-sm text-center">Vía se Estrecha</h3></div>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/no peatones.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">NO PEATONES</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Prohibido el ingreso de peatones a una vía o área determinada por esta señal.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card-titulos">
-                <img src="img/señales preventivas.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <p>
-                    <font text size="5" color="#202020">Estas señales se instalan en las vias para alertar a los conductores sobre la presencia de posibles peligros para la seguridad en la via.
-                </p>     
-            <p style align="center">
-                </font>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/subida peligrosa.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">SUBIDA PELIGROSA</font>
-                </b>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/pavimento irregular.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">PAVIMENTO IRREGULAR</font>
-                </b>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/semáforo.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">SEMÁFORO</font>
-                </b>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/via estrecha.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">VÍA SE ESTRECHA</font>
-                </b>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/hombres trabajando.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">HOMBRE TRABAJANDO</font>
-                </b>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/niños.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">NIÑOS</font>
-                </b>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/zona de derrumbe derecha.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">ZONA DE DERRUMBE DERECHA</font>
-                </b>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/depresion.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">DEPRESIÓN O BADÉN</font>
-                </b>
-            </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/señal animales.png" alt="Imagen 1">
-            </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">ANIMALES</font>
-                </b>
-            </div>
-        </center>
-    </main>
-    <script src="js/script.js"></script>
+          </div>
+        </section>
+      </div>
+      <div class="text-center mt-12">
+        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-yellow-600 text-white font-medium rounded-lg hover:shadow-lg transition-all hover:-translate-y-1">
+          <span class="iconify" data-icon="mdi:arrow-left" data-width="20"></span>
+          Volver al Inicio
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-gradient-to-r from-teal-700 to-cyan-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm opacity-80">© 2026 MCSD - Manual de Conducción Seguridad Dominicana</p>
+      <p class="text-xs opacity-60 mt-2">Desarrollado por Diego Samuel y equipo • v2.0</p>
+    </div>
+  </footer>
+  <script type="module" src="src/js/main.js"></script>
+  <style>
+    #menu.menu-open { transform: translateX(0); }
+    #menu-overlay.active { opacity: 1; pointer-events: auto; }
+  </style>
 </body>
-
 </html>

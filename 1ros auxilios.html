@@ -1,184 +1,139 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MANUAL CONDUCCION SEGURIDAD DOMINICANA</title>
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Primeros auxilios básicos para emergencias en la vía">
+  <title>Primeros Auxilios - MCSD</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
-
-<body>
-    <!-- Área de logo -->
-    <header>
-        <main class="main">
-            <a href="index.html">
-                <img src="img/logo.png" alt="Logo">
-            </a>
-            <a href="index.html">
-                <div class="card-logo">
-                    <img src="img/titulo_primeros auxilios.png" alt="Logo">
-                </div>
-            </a>
-        </main>
-    </header>
-    <!-- Menú desplegable -->
-    <div class="card-menu">
-        <button id="menu-btn"><img src="img/menu-button.png" alt="Botón de menú"></button>
+<body class="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50">
+  <header class="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-red-600 to-rose-600 shadow-lg">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="img/logo.png" alt="Logo MCSD" class="w-14 h-14 transition-transform group-hover:scale-110">
+          <img src="img/titulo_primeros auxilios.png" alt="Primeros Auxilios" class="h-12 hidden sm:block">
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="text-white hover:text-red-200 transition-colors font-medium">Inicio</a>
+          <a href="nosotros.html" class="text-white hover:text-red-200 transition-colors font-medium">Nosotros</a>
+          <a href="contactos.html" class="text-white hover:text-red-200 transition-colors font-medium">Contactos</a>
+          <a href="numeros.html" class="text-white hover:text-red-200 transition-colors font-medium">Números</a>
+        </nav>
+        <button id="menu-btn" class="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors" aria-label="Abrir menú" aria-expanded="false">
+          <span class="iconify" data-icon="mdi:menu" data-width="32"></span>
+        </button>
+      </div>
     </div>
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contactos.html">Contactos</a></li>
-            <li><a href="numeros.html">Numeros</a></li>
-        </ul>
-    </nav>
-    <script src="js/menu.js"></script>
+  </header>
+  <nav id="menu" class="fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-red-600 to-rose-600 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+    <div class="p-6">
+      <button class="absolute top-4 right-4 p-2 text-white hover:bg-white/10 rounded-lg transition-colors" onclick="document.getElementById('menu').classList.remove('menu-open')">
+        <span class="iconify" data-icon="mdi:close" data-width="24"></span>
+      </button>
+      <ul class="mt-12 space-y-4">
+        <li><a href="index.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:home" data-width="20"></span>Inicio</a></li>
+        <li><a href="nosotros.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:account-group" data-width="20"></span>Nosotros</a></li>
+        <li><a href="contactos.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:email" data-width="20"></span>Contactos</a></li>
+        <li><a href="numeros.html" class="block px-4 py-3 text-white hover:bg-white/10 rounded-lg transition-colors font-medium"><span class="iconify inline-block mr-2" data-icon="mdi:phone" data-width="20"></span>Números</a></li>
+      </ul>
     </div>
-
-    <!-- El texto y las imagenes -->
-    <main class="main">
-        <center>
-            <div class="card2">
-                <img src="img/en caso de accidente.jpg" alt="Imagen 1">
+  </nav>
+  <main class="pt-24 pb-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 animate-fade-in-up">
+        <h1 class="text-4xl md:text-5xl font-display font-bold gradient-text mb-4">Primeros Auxilios</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Conocimientos básicos para actuar en emergencias en la vía</p>
+      </div>
+      <div class="max-w-4xl mx-auto space-y-6">
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_0%_cover_30%]">
+          <div class="glass rounded-3xl p-8 shadow-2xl">
+            <div class="flex items-start gap-4">
+              <span class="iconify text-red-500 flex-shrink-0" data-icon="mdi:alert-circle" data-width="48"></span>
+              <div>
+                <h3 class="text-2xl font-display font-bold text-gray-800 mb-3">En Caso de Accidente</h3>
+                <ul class="text-gray-600 space-y-2 list-disc list-inside">
+                  <li>Mantén la calma y evalúa la situación</li>
+                  <li>Llama al 911 inmediatamente</li>
+                  <li>No muevas a los heridos a menos que sea absolutamente necesario</li>
+                  <li>Señaliza el área del accidente</li>
+                  <li>Proporciona primeros auxilios básicos si estás capacitado</li>
+                </ul>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">QUE HACER EN CASO DE ACCIDENTE</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Si se ve involucrado en un accidente debe parar inmediatamente y estacionar su vehículo este fuera de todo peligro y prestar todo auxilio posible a cualquier otra persona en vuelta en el accidente.
-                </p>     
-            <p style align="center">
-                </font>
-                <p>
-                    <font text size="5" color="#202020">
-                        <ul div class="text-left">
-                            <li>
-                                Si en la via (autopistas) existen telefonos de auxilio, debemos utilizar esta facilidad para comunicar a las autoridades (polocia y ambulancia).
-                            </li>
-                            <li>
-                                Si no existen teléfonos de auxilio en la carretera, se debe pedir ayuda a otros usuarios y/o si tenemos utilizar un teléfono celular.
-                            </li>
-                        </ul>
-                </p>     
-            <p style align="center">
-                </font>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="timeline-view animate-fade-in-up animate-range-[entry_20%_cover_50%]">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <img src="img/botiquin.jpg" alt="Botiquín" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Botiquín de Primeros Auxilios</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Todo vehículo debe llevar un botiquín con elementos básicos: vendas, gasas, alcohol, tijeras, guantes desechables y medicamentos básicos.</p>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card1">
-                <img src="img/botiquin.jpg" alt="Imagen 1">
+          </div>
+          <div class="timeline-view animate-fade-in-up animate-range-[entry_30%_cover_60%]">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <img src="img/respiracion.jpg" alt="Respiración" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Verificar Respiración</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Verifica si la persona respira acercando tu oído a su boca y nariz. Observa si el pecho se eleva. Si no respira, inicia RCP si estás capacitado.</p>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">BOTIQUIN DE PRIMEROS AUXILIOS</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">Cada vehículo debe tener un botiquín de primeros auxilios que contenga lo siguiente:
-                </p>     
-            <p style align="center">
-                </font>
-                <p>
-                    <font text size="5" color="#202020">
-                        <ul div class="text-left">
-                            <li>
-                                Guantes desechables
-                            </li>
-                            <li>
-                                Algodón y gases estériles.
-                            </li>
-                            <li>
-                                Collar ortopédico de protección cervical
-                            </li>
-                            <li>
-                                Una goma elástica de 5 a 10cm de ancho y 150cm de largo.
-                            </li>
-                            <li>
-                                Tijeras, pinzas e imperdibles. Crema antiséptica.
-                            </li>
-                        </ul>
-                    </font>
-                </p>     
-            <p style align="center">
-
+          </div>
+          <div class="timeline-view animate-fade-in-up animate-range-[entry_40%_cover_70%]">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <img src="img/pulso.jpg" alt="Pulso" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Verificar Pulso</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Coloca dos dedos en el cuello (arteria carótida) o en la muñeca para verificar el pulso. Si no hay pulso y estás capacitado, inicia RCP.</p>
+              </div>
             </div>
-        </center>
-
-        <center>
-
-            <div class="card2">
-                <img src="img/pulso.jpg" alt="Imagen 1">
+          </div>
+          <div class="timeline-view animate-fade-in-up animate-range-[entry_50%_cover_80%]">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <img src="img/en caso de accidente.jpg" alt="Normas Básicas" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Normas Básicas</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Protege la escena, evalúa la situación, llama a emergencias, y brinda ayuda sin poner en riesgo tu seguridad.</p>
+              </div>
             </div>
-            <div class="card-text">
-                <b>
-                    <font text size="6" color="#333">PULSO</font>
-                </b>
-                <p>
-                    <font text size="5" color="#202020">El pulso se puede localizar en cualquiera de las arterias carótidas situadas en el cuello a ambos lados de la nuez. Para ello utilizaremos 2 o 3 dedos (nunca el pulgar) de la mano que teníamos en la nuca, que la haremos resbalar por
-                        cualquiera de los laterales de la tráquea (mejor por el lado opuesto a nosotros) hasta la depresión, existente entre esta y los músculos esternocleidomastoideos, presionando la nuez.
-                </p>     
-            <p style align="center">
-                </font>
-                <center>
-
-                    <div class="card1">
-                        <img src="img/normas basicas.jpg" alt="Imagen 1">
-                    </div>
-                    <div class="card-text">
-                        <b>
-                            <font text size="6" color="#333">NORMAS BASICAS</font>
-                        </b>
-                        <p>
-                            <font text size="5" color="#202020">
-                                <ul div class="text-left">
-                                    <li>
-                                        No mover a los heridos, salvo que sea imperiosamente necesario para su reanimación.
-                                    </li>
-                                    <li>
-                                        No quitar el casco a los motociclistas sin conocer técnicas para hacerlo.
-                                    </li>
-                                    <li>
-                                        No mover el cuello de los que presenten signos de posible lesión modular.
-                                    </li>
-                                    <li>
-                                        No darles medicamentos, alimentos ni bebidas.
-                                    </li>
-                                    <li>
-                                        Tijeras, pinzas e imperdibles. Crema antiséptica.
-                                    </li>
-                                </ul>
-                            </font>
-                        </p>     
-            <p style align="center">
-                    </div>
-                </center>
-
-                <center>
-
-                    <div class="card2">
-                        <img src="img/respiracion.jpg" alt="Imagen 1">
-                    </div>
-                    <div class="card-text">
-                        <b>
-                            <font text size="6" color="#333">RESPIRACIÓN</font>
-                        </b>
-                        <p>
-                            <font text size="5" color="#202020">La evaluaremos acercando un lateral de nuestra cara a la boca y nariz de la víctima mientras miramos su pecho y abdomen.
-                        </p>     
-            <p style align="center">
-                        </font>
-                        <p>
-                            <font text size="5" color="#202020">Buscamos con esto oír y/o sentir en muestra mejilla la entrada y salida del aire de la víctima, a la vez que nos permite ver y observar el movimiento respiratorio del tórax y abomben.
-                        </p>     
-            <p style align="center">
-                        </font>
-    </main>
-    <script src="js/script.js"></script>
+          </div>
+        </div>
+        <div class="timeline-view animate-fade-in-up animate-range-[entry_60%_cover_90%]">
+          <div class="glass rounded-3xl p-8 shadow-2xl bg-amber-50">
+            <div class="flex items-start gap-4">
+              <span class="iconify text-amber-600 flex-shrink-0" data-icon="mdi:information" data-width="32"></span>
+              <div>
+                <h3 class="text-xl font-display font-bold text-gray-800 mb-2">Importante</h3>
+                <p class="text-gray-700 leading-relaxed">Los primeros auxilios básicos pueden salvar vidas. Considera tomar un curso certificado de primeros auxilios y RCP. En caso de emergencia, siempre llama al 911.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-rose-600 text-white font-medium rounded-lg hover:shadow-lg transition-all hover:-translate-y-1">
+          <span class="iconify" data-icon="mdi:arrow-left" data-width="20"></span>
+          Volver al Inicio
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-gradient-to-r from-teal-700 to-cyan-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm opacity-80">© 2026 MCSD - Manual de Conducción Seguridad Dominicana</p>
+      <p class="text-xs opacity-60 mt-2">Desarrollado por Diego Samuel y equipo • v2.0</p>
+    </div>
+  </footer>
+  <script type="module" src="src/js/main.js"></script>
+  <style>
+    #menu.menu-open { transform: translateX(0); }
+    #menu-overlay.active { opacity: 1; pointer-events: auto; }
+  </style>
 </body>
-
 </html>
