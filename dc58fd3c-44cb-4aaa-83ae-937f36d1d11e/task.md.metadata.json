@@ -1,0 +1,5 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_TASK",
+  "summary":  "Checklist detallado para modernizar el proyecto MCSD (Manual de Conducción Seguridad Dominicana) de 2019. Incluye migración a Tailwind CSS, implementación de diseño responsive con detección de dispositivo, animaciones modernas, mejora de UX/UI, y optimización de estructura del proyecto.",
+  "updatedAt":  "2026-01-16T02:57:43.396016295Z"
+}

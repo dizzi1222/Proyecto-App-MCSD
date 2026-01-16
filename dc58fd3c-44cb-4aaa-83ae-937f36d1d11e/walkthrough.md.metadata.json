@@ -1,0 +1,5 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary":  "Documentación de la modernización del proyecto MCSD. Incluye configuración del stack tecnológico (Tailwind CSS v4, Vite, tailwind-animations), creación de la página principal con diseño premium, sistema de detección de dispositivos, y servidor de desarrollo funcionando en localhost:3000.",
+  "updatedAt":  "2026-01-16T03:12:11.138582688Z"
+}
