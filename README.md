@@ -2,7 +2,7 @@
 
 Aplicación educativa sobre conducción y seguridad vial en República Dominicana. Proyecto final de grado en **Sistemas Informáticos**.
 
-> **Live Demo:** [dizzi1222.github.io/Proyecto-App-MCSD](https://dizzi1222.github.io/Proyecto-App-MCSD/)
+> **Live Demo:** [proyecto-app-mcsd.vercel.app](https://proyecto-app-mcsd.vercel.app/)
 
 <p align="left">
   <img src="https://github.com/dizzi1222.png" width="36" height="36" style="border-radius: 50%;" alt="dizzi1222" />
