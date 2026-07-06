@@ -19,6 +19,7 @@ Aplicación educativa sobre conducción y seguridad vial en República Dominican
 
 ## Deploy
 
+### Web (GitHub Pages)
 El proyecto se despliega en **GitHub Pages** desde la rama `main`. Cualquier push a `main` activa el deploy automático:
 
 ```bash
@@ -27,7 +28,16 @@ git push origin main
 # https://dizzi1222.github.io/Proyecto-App-MCSD/
 ```
 
-Para desarrollo local:
+### Móvil (APK — Volt Build)
+Deploy alternativo como aplicación Android nativa via **Volt Build**:
+
+```
+https://apps.volt.build/1d496dbf-1137-4fec-92d0-29c05aac9a3e/android.debug.apk
+```
+
+> La app fue originalmente diseñada para llevarse a APK. Este enlace contiene el build Android debug.
+
+### Desarrollo local
 
 ```bash
 npm install
