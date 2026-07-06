@@ -1,375 +1,42 @@
-# Modernización MCSD v2.0 - Walkthrough
+# 🚗 MCSD · Manual de Conducción y Seguridad Dominicana
 
-## Resumen de Cambios
+Aplicación educativa sobre conducción y seguridad vial en República Dominicana. Proyecto final de grado en **Sistemas Informáticos**.
 
-Se ha modernizado completamente el proyecto MCSD (Manual de Conducción Seguridad Dominicana) de 2019, transformándolo en una aplicación web moderna con tecnologías 2026.
+> **Live Demo:** [dizzi1222.github.io/Proyecto-App-MCSD](https://dizzi1222.github.io/Proyecto-App-MCSD/)
 
----
-
-## Stack Tecnológico Implementado
-
-### Build Tools & Frameworks
-- ✅ **Vite 5.0**: Build tool moderno y rápido
-- ✅ **Tailwind CSS v4**: Framework CSS utility-first
-- ✅ **tailwind-animations 1.0.1**: Librería de animaciones pre-construidas
-- ✅ **@tailwindcss/postcss**: Plugin PostCSS para Tailwind v4
-- ✅ **Autoprefixer**: Compatibilidad cross-browser
-
-### Estructura del Proyecto
-
-```
-Proyecto-App-MCSD/
-├── src/
-│   ├── styles/
-│   │   └── main.css          ✅ Estilos con Tailwind + animaciones
-│   └── js/
-│       ├── main.js           ✅ Entry point principal
-│       ├── device-detection.js  ✅ Detección móvil/tablet/desktop
-│       ├── animations.js     ✅ Scroll animations + Intersection Observer
-│       └── menu.js           ✅ Menú responsive con overlay
-├── index.html                ✅ Página principal modernizada
-├── package.json              ✅ Dependencias configuradas
-├── vite.config.js            ✅ Configuración Vite multi-página
-├── tailwind.config.js        ✅ Paleta personalizada + animaciones
-├── postcss.config.js         ✅ PostCSS con @tailwindcss/postcss
-└── .gitignore                ✅ Actualizado para Node.js
-```
+<p align="left">
+  <img src="https://github.com/dizzi1222.png" width="36" height="36" style="border-radius: 50%;" alt="dizzi1222" />
+  <strong> @dizzi1222</strong>
+</p>
 
 ---
 
-## Características Implementadas
+## Stack
 
-### 🎨 Diseño Visual Premium
+- HTML5, CSS3, JavaScript
+- Vite 5, Tailwind CSS v4, PostCSS
+- Glassmorphism, scroll animations, splash screen
 
-#### Paleta de Colores Moderna
-```css
-/* Turquesa moderno (primary) */
---color-primary-400: #2dd4bf
---color-primary-500: #14b8a6
---color-primary-600: #0d9488
+## Deploy
 
-/* Azul profundo (accent) */
---color-accent-400: #38bdf8
---color-accent-500: #0ea5e9
-```
-
-#### Gradientes Vibrantes
-- **Hero Background**: `from-cyan-400 via-teal-500 to-blue-600`
-- **Cards**: Cada sección tiene su propio gradiente distintivo
-  - Vehículos: `from-purple-400 to-pink-500`
-  - Señales: `from-orange-400 to-yellow-500`
-  - Documentación: `from-green-400 to-emerald-500`
-  - Primeros Auxilios: `from-red-400 to-rose-500`
-
-#### Glassmorphism Effects
-```css
-.glass {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-```
-
-Aplicado en:
-- Logo card principal
-- Cards de navegación
-- Navbar en scroll
-
----
-
-### 📱 Responsive Design
-
-#### Detección Automática de Dispositivo
-```javascript
-// device-detection.js
-const isMobile = /Android|webOS|iPhone|iPad|iPod/.test(navigator.userAgent);
-const isTablet = /(tablet|ipad|playbook|silk)/.test(navigator.userAgent);
-
-// Agrega clases: is-mobile, is-tablet, is-desktop
-document.documentElement.classList.add(`is-${deviceType}`);
-```
-
-#### Breakpoints Tailwind
-- **Mobile**: < 768px (1 columna)
-- **Tablet**: 768px - 1024px (2 columnas)
-- **Desktop**: > 1024px (4 columnas)
-
-```html
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-```
-
----
-
-### ✨ Animaciones Modernas
-
-#### Splash Screen
-- Fade in del logo con bounce animation
-- Auto-cierre después de 2 segundos
-- Transición suave con `splash-exit` class
-
-#### Scroll Animations (tailwind-animations)
-```html
-<!-- Staggered reveal de cards -->
-<div class="timeline-view animate-fade-in-up animate-range-[entry_0%_cover_30%]">
-<div class="timeline-view animate-fade-in-up animate-range-[entry_10%_cover_40%]">
-<div class="timeline-view animate-fade-in-up animate-range-[entry_20%_cover_50%]">
-<div class="timeline-view animate-fade-in-up animate-range-[entry_30%_cover_60%]">
-```
-
-#### Hover Effects
-- **Cards**: `hover:scale-105` con transición suave
-- **Iconos**: `group-hover:rotate-6` en los iconos de las cards
-- **Links**: Cambio de color con `hover:text-cyan-200`
-
----
-
-### 🧭 Sistema de Navegación
-
-#### Header Sticky con Blur
-```javascript
-// Navbar se vuelve semi-transparente con blur al hacer scroll
-window.addEventListener('scroll', () => {
-  if (currentScroll > 100) {
-    header.classList.add('scrolled');
-  }
-});
-```
-
-```css
-header.scrolled {
-  background: rgba(20, 184, 166, 0.95);
-  backdrop-filter: blur(10px);
-}
-```
-
-#### Menú Móvil
-- Slide-in desde la derecha
-- Overlay con blur backdrop
-- Cierre con ESC, click fuera, o en links
-- Accesibilidad con ARIA labels
-
----
-
-### 🎯 Componentes Principales
-
-#### Hero Section
-- Gradiente animado de fondo
-- Elementos decorativos con blur
-- Logo en glassmorphism card
-- Tipografía premium (Outfit + Inter)
-- Scroll indicator animado
-
-#### Navigation Cards
-Cuatro cards principales con:
-- Iconos SVG de Iconify
-- Gradientes únicos por sección
-- Glassmorphism effect
-- Hover animations
-- Responsive grid
-
-**Iconos utilizados**:
-- `mdi:car-multiple` - Vehículos
-- `mdi:traffic-light` - Señales
-- `mdi:file-document-multiple` - Documentación
-- `mdi:medical-bag` - Primeros Auxilios
-
----
-
-## Servidor de Desarrollo
-
-### Comandos Disponibles
+El proyecto se despliega en **GitHub Pages** desde la rama `main`. Cualquier push a `main` activa el deploy automático:
 
 ```bash
-# Instalar dependencias
-npm install
-
-# Desarrollo (localhost:3000)
-npm run dev
-
-# Build de producción
-npm run build
-
-# Preview de producción
-npm run preview
+git push origin main
+# → GitHub Actions despliega en:
+# https://dizzi1222.github.io/Proyecto-App-MCSD/
 ```
 
-### Estado Actual
-✅ **Servidor corriendo en**: `http://localhost:3000/`
+Para desarrollo local:
 
----
+```bash
+npm install
+npm run dev       # → localhost:3000
+npm run build     # → dist/
+```
 
-## Páginas Modernizadas
+## Historia
 
-### ✅ Completadas (8/8)
+> *"Mi proyecto final para graduarme. En grupo, pero lo hice casi solo. Mis compañeros ayudaron con los mockups en Canvas — un concepto que ni estaba bien definido, pero el profesor supo indicarlo. Sin experiencia, fue una experiencia horrible. Pero aprobé."*
 
-1. **[index.html](file:///home/diego/workspace/Proyecto-App-MCSD/index.html)** - Página principal
-   - Hero section con glassmorphism
-   - 4 cards principales con gradientes únicos
-   - Splash screen animado
-   - Navbar sticky con blur
-
-2. **[nosotros.html](file:///home/diego/workspace/Proyecto-App-MCSD/nosotros.html)** - Equipo
-   - 6 cards de miembros del equipo
-   - Fotos circulares con rings de colores
-   - Gradientes únicos por miembro
-   - Animaciones staggered
-
-3. **[contactos.html](file:///home/diego/workspace/Proyecto-App-MCSD/contactos.html)** - Redes Sociales
-   - Cards de Facebook, Instagram, YouTube
-   - Gradientes distintivos por red social
-   - Hover effects con scale
-   - Formulario de contacto
-
-4. **[numeros.html](file:///home/diego/workspace/Proyecto-App-MCSD/numeros.html)** - Emergencias
-   - Click-to-call en móvil
-   - Iconos animados con pulse
-   - Cards grandes y legibles
-   - Colores distintivos por servicio
-
-5. **[vehiculos.html](file:///home/diego/workspace/Proyecto-App-MCSD/vehiculos.html)** - Tipos de Vehículos
-   - 8 tipos de vehículos
-   - Grid responsive 2x4
-   - Imágenes con overlay
-   - Header morado/rosa
-
-6. **[señales.html](file:///home/diego/workspace/Proyecto-App-MCSD/se%C3%B1ales.html)** - Señales de Tránsito
-   - Señales regulatorias (8)
-   - Señales preventivas (8)
-   - Grid compacto 4 columnas
-   - Categorías organizadas
-   - Header naranja/amarillo
-
-7. **[documentacion.html](file:///home/diego/workspace/Proyecto-App-MCSD/documentacion.html)** - Documentos Requeridos
-   - 6 documentos principales
-   - Licencia, placas, seguro, revista, matrícula, permiso internacional
-   - Cards informativas
-   - Header verde/esmeralda
-
-8. **[1ros auxilios.html](file:///home/diego/workspace/Proyecto-App-MCSD/1ros%20auxilios.html)** - Primeros Auxilios
-   - Información de emergencia
-   - Botiquín, respiración, pulso
-   - Normas básicas
-   - Header rojo/rosa
-
----
-
-## Características Implementadas por Página
-
-### Gradientes Únicos por Sección
-- **Index**: Cyan → Teal → Blue
-- **Nosotros**: Teal → Cyan
-- **Contactos**: Teal → Cyan
-- **Números**: Teal → Cyan
-- **Vehículos**: Purple → Pink
-- **Señales**: Orange → Yellow
-- **Documentación**: Green → Emerald
-- **Primeros Auxilios**: Red → Rose
-
-### Animaciones Implementadas
-- ✅ Splash screen con fade-out
-- ✅ Scroll animations (timeline-view)
-- ✅ Staggered reveal en grids
-- ✅ Hover effects (scale, rotate)
-- ✅ Smooth transitions
-- ✅ Pulse animations en iconos
-
----
-
-## Próximos Pasos (Opcionales)
-
-### Optimizaciones Pendientes
-- [ ] [vehiculos.html](file:///home/diego/workspace/Proyecto-App-MCSD/vehiculos.html) - Página de vehículos
-- [ ] `señales.html` - Señales de tránsito
-- [ ] [documentacion.html](file:///home/diego/workspace/Proyecto-App-MCSD/documentacion.html) - Documentación requerida
-- [ ] `1ros auxilios.html` - Primeros auxilios
-- [ ] [nosotros.html](file:///home/diego/workspace/Proyecto-App-MCSD/nosotros.html) - Equipo
-- [ ] [contactos.html](file:///home/diego/workspace/Proyecto-App-MCSD/contactos.html) - Contactos
-- [ ] [numeros.html](file:///home/diego/workspace/Proyecto-App-MCSD/numeros.html) - Números de emergencia
-
-### Mejoras Adicionales
-- [ ] Optimizar imágenes (convertir a WebP)
-- [ ] Implementar lazy loading
-- [ ] Agregar PWA capabilities
-- [ ] Testing cross-browser
-- [ ] Lighthouse optimization
-
----
-
-## Capturas de Pantalla
-
-> **Nota**: El servidor está corriendo en `localhost:3000`. Puedes abrir el navegador para ver:
-> - Splash screen animado
-> - Hero section con glassmorphism
-> - Cards con gradientes y hover effects
-> - Menú responsive
-> - Animaciones scroll-based
-
----
-
-## Tecnologías Destacadas
-
-### Tailwind Animations
-Utilizamos la librería `tailwind-animations` para animaciones avanzadas:
-- `animate-fade-in-up`: Entrada suave de elementos
-- `animate-bounce`: Logo en splash screen
-- `animate-pulse`: Indicadores de carga
-- `timeline-view`: Animaciones basadas en scroll
-- `animate-range-*`: Control preciso de timing
-
-### Iconify
-Sistema unificado de iconos SVG:
-- 150,000+ iconos disponibles
-- Carga bajo demanda
-- Sin dependencias pesadas
-- Personalización con `data-width`, `data-color`
-
----
-
-## Comparación Antes/Después
-
-### Antes (2019)
-- CSS vanilla básico
-- Diseño estático sin animaciones
-- Colores planos (#42a8a1, #b8f0ed)
-- Sin responsive real
-- Menú simple
-- Imágenes PNG pesadas
-
-### Después (2026)
-- ✅ Tailwind CSS v4 + tailwind-animations
-- ✅ Animaciones scroll-based y hover effects
-- ✅ Gradientes vibrantes + glassmorphism
-- ✅ Responsive con detección de dispositivo
-- ✅ Menú moderno con overlay y blur
-- ✅ Iconos SVG optimizados
-- ✅ Build system moderno (Vite)
-- ✅ Tipografía premium (Google Fonts)
-
-
----
-
-## Mockups del Diseño
-
-### Vista Móvil
-![Diseño móvil responsive](/home/diego/.gemini/antigravity/brain/dc58fd3c-44cb-4aaa-83ae-937f36d1d11e/mcsd_mobile_mockup_1768532408762.png)
-
-### Hero Section
-![Hero section con glassmorphism](/home/diego/.gemini/antigravity/brain/dc58fd3c-44cb-4aaa-83ae-937f36d1d11e/mcsd_hero_mockup_1768532369384.png)
-
-### Cards de Navegación
-![Cards con glassmorphism y gradientes](/home/diego/.gemini/antigravity/brain/dc58fd3c-44cb-4aaa-83ae-937f36d1d11e/mcsd_cards_mockup_1768532389774.png)
-
----
-
-## Conclusión
-
-La página principal ([index.html](file:///home/diego/workspace/Proyecto-App-MCSD/index.html)) ha sido completamente modernizada con:
-- 🎨 Diseño visual premium y profesional
-- 📱 Responsive design adaptativo
-- ✨ Animaciones suaves y modernas
-- ⚡ Performance optimizado con Vite
-- 🎯 UX mejorada significativamente
-
-**Estado**: ✅ Listo para continuar con las páginas internas
-
-**Servidor**: 🟢 Corriendo en `http://localhost:3000/`
+Original de 2019, modernizado a Vite + Tailwind CSS v4 con 8 páginas, splash screen, glassmorphism y diseño responsive. Una redención.
